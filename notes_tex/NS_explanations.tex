@@ -1,6 +1,32 @@
 \documentclass{article}
 
 \begin{document}
+\title{A brief summary of nested sampling}
+\maketitle
+The purpose of this document is to summarise some literature (written mainly by astronomers and physicists) on the subject of nested sampling and its applications to problems in astronomy and cosmology.
+
+The aim is also to provide myself with a ground-up view of nested sampling and its advantages/disadvatanges.
+
+This document should (ideally) be littered with simple questions about different aspects of the method and things i havent understood from a given paper. 
+Hopefully, these should be answered
+\section{Intro}
+Nested sampling was a technique invented by John Skilling at Cambridge (see Skilling 2004). It is a bayesian inference method that concentrates on the quantity called the evidence (E or Z). It is therefore concerned more with the problem of model selection vis-a-vis the more widely treated problem of parameter estimation. 
+
+Lets start some basic mathematical formalism
+
+\begin{equation}
+\Pr(\theta | D, I) = \frac{\Pr(D | \theta, I) \Pr(\theta |  I)}{\Pr(D | I )}
+\end{equation}
+
+Here, the quantity in the denominator is the evidence, which acts as a normalization for the LHS, which is the posterior distribution
+
+The evidence, hence can be written as
+
+\begin{equation}
+\Pr(D | I)= \int L(D | \theta) Pr(\theta) d \theta
+\end{equation}
+
+In words, the evidence is the integral of the likelihood over the prior mass 
 
 
 
