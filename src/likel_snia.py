@@ -1,7 +1,7 @@
 """
 Using Evidence output from nested sampling, distinguish between different cosmological models by setting criteria for Bayes Factor values
 
-Us
+Using nested (K. Barbary) the aim is to have a robust analyiss of alternative cosmological models that claim to be better or as good fits as LCDM.
 """
 
 import numpy as np
@@ -41,8 +41,8 @@ def lnlikel(theta):
 	#dl=lum_dist(z, theta[0], theta[1])
 	
 	#uses cosmocalc distance measurement
-	model=dist.mod(z)
-	
+	#model=dist.mod(z)
+	model= z**2
 	return -0.5*np.sum((mag-model)**2/sig**2.)
 
 def prior(u):
